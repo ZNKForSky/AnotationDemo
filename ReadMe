@@ -1,0 +1,14 @@
+注解：
+元注解：注解注解的注解（我这说的啥呀{>-<} ）------ 就是用来描述说明注解本身的注解。
+eg.
+@Retention(RetentionPolicy.SOURCE)
+@Target({ElementType.ANNOTATION_TYPE})
+public @interface IntDef {
+    int[] value() default {};
+
+    boolean flag() default false;
+}
+如上代码中的Retention、Target都是元注解，用来描述说明IntDef注解。
+
+根据注解的保留级别不同，对注解的使用自然存在不同场景。由注解的三个不同保留级别可知，注解作用于：
+源码、字节码与运行时你能举一些案例吗？

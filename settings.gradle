@@ -1,0 +1,5 @@
+rootProject.name='AnotationDemo'
+include ':app'
+include ':compiler'
+include ':reflect'
+include ':check'
