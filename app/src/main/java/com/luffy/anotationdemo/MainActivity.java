@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.luffy.anotationdemo.inject.InjectUtil;
 import com.luffy.anotationdemo.inject.InjectView;
 
-@ZnkAnnotation(id = 1)
 public class MainActivity extends AppCompatActivity {
     @InjectView(R.id.tv_hello)
     private TextView mTv;

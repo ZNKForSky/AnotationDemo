@@ -1,1 +1,9 @@
-Calculator存在0个异常
+add 方法出异常了
+异常的名称:NullPointerException
+异常的原因:null
+--------------------------
+div 方法出异常了
+异常的名称:ArithmeticException
+异常的原因:/ by zero
+--------------------------
+Calculator存在2个异常

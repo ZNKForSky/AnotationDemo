@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * 创建时间：2020/10/26 17:04<p>
  * 描述：检测代码的注解
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Check {
 }

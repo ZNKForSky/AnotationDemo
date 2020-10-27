@@ -43,5 +43,6 @@ public class Test {
         setCurrentDay(WeekDay.SUNDAY);
         //使用IntDef
         setCurrentDay(SUNDAY);
+//        setCurrentDay(1);
     }
 }

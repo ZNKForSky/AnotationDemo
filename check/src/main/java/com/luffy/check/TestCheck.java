@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
  * 作者：<a href="https://blog.csdn.net/qq_35101450">张宁科CSDN主页</a><p>
  * 创建时间：2020/10/26 17:07<p>
- * 描述：
+ * 描述：测试Check框架
  */
 public class TestCheck {
     public static void main(String[] args) throws IOException {
