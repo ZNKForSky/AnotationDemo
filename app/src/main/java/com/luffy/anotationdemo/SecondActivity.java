@@ -13,6 +13,7 @@ import com.luffy.anotationdemo.inject.AutoWired;
 import com.luffy.anotationdemo.inject.InjectUtils;
 import com.luffy.anotationdemo.inject.InjectView;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -50,6 +51,10 @@ public class SecondActivity extends AppCompatActivity {
     private Parcelable parcelable;
     @AutoWired
     private Parcelable[] parcelableArray;
+    @AutoWired
+    private Serializable serializable;
+    @AutoWired
+    private CharSequence[] charSequenceArrayList;
 
 
     @Override
@@ -69,7 +74,9 @@ public class SecondActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate: char ======= " + c);
         Log.i(TAG, "onCreate: intArray ======= " + Arrays.toString(intArray));
         Log.i(TAG, "onCreate: bundle ======= " + bundle);
-        Log.i(TAG, "onCreate: parcelable ======= " +parcelable);
+        Log.i(TAG, "onCreate: parcelable ======= " + parcelable);
         Log.i(TAG, "onCreate: parcelableArray ======= " + Arrays.toString(parcelableArray));
+        Log.i(TAG, "onCreate: serializable ======= " + serializable);
+        Log.i(TAG, "onCreate: charSequenceArrayList ======= " + Arrays.toString(charSequenceArrayList));
     }
 }

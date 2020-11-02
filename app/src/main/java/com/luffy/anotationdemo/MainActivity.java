@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.luffy.anotationdemo.entity.Cat;
 import com.luffy.anotationdemo.entity.Person;
 import com.luffy.anotationdemo.inject.InjectUtils;
 import com.luffy.anotationdemo.inject.InjectView;
@@ -56,10 +57,11 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("bundle",savedInstanceState);
                 intent.putExtra("parcelable",new Person("luffy",18,"male"));
                 intent.putExtra("parcelableArray",parcelables);
+                intent.putExtra("serializable",new Cat("球球"));
                 charSequenceArrayList.add("借两盏薄酒");
                 charSequenceArrayList.add("便敢论天下");
-
                 intent.putCharSequenceArrayListExtra("charSequenceArrayList",charSequenceArrayList);
+
                 startActivity(intent);
             }
         });

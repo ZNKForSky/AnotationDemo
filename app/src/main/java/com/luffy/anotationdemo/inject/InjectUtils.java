@@ -89,6 +89,7 @@ public class InjectUtils {
 
                     Class<?> type = declaredField.getType();
                     Class<?> componentType = declaredField.getType().getComponentType();
+                    //TODO 传输CharSequence[]存在问题
                     //当前属性是数组并且是 Parcelable或其子类数组
                     if (declaredField.getType().isArray() &&
                             Parcelable.class.isAssignableFrom(componentType)) {
