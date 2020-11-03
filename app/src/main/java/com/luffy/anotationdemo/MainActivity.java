@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private int[] intArray = {1, 2, 3, 4, 5, 6};
     private Parcelable[] parcelables = {new Person("luffy",18,"male"),new Person("qq",17,"famale")};
     private ArrayList<CharSequence> charSequenceArrayList = new ArrayList<>();
+    private ArrayList<Person> parcelableArrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                //测试所有可传递的数据类型
                 intent.putExtra("byte", b);
                 intent.putExtra("short", s);
                 intent.putExtra("int", i);
@@ -61,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
                 charSequenceArrayList.add("借两盏薄酒");
                 charSequenceArrayList.add("便敢论天下");
                 intent.putCharSequenceArrayListExtra("charSequenceArrayList",charSequenceArrayList);
+                parcelableArrayList.add(new Person("qq",17,"female"));
+                parcelableArrayList.add(new Person("kk",18,"male"));
+                intent.putParcelableArrayListExtra("parcelableArrayList",parcelableArrayList);
 
                 startActivity(intent);
             }

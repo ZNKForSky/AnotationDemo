@@ -9,11 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.luffy.anotationdemo.entity.Person;
 import com.luffy.anotationdemo.inject.AutoWired;
 import com.luffy.anotationdemo.inject.InjectUtils;
 import com.luffy.anotationdemo.inject.InjectView;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -54,7 +56,9 @@ public class SecondActivity extends AppCompatActivity {
     @AutoWired
     private Serializable serializable;
     @AutoWired
-    private CharSequence[] charSequenceArrayList;
+    private ArrayList<CharSequence> charSequenceArrayList;
+    @AutoWired
+    private ArrayList<Person> parcelableArrayList;
 
 
     @Override
@@ -77,6 +81,7 @@ public class SecondActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate: parcelable ======= " + parcelable);
         Log.i(TAG, "onCreate: parcelableArray ======= " + Arrays.toString(parcelableArray));
         Log.i(TAG, "onCreate: serializable ======= " + serializable);
-        Log.i(TAG, "onCreate: charSequenceArrayList ======= " + Arrays.toString(charSequenceArrayList));
+        Log.i(TAG, "onCreate: charSequenceArrayList ======= " + Arrays.toString(charSequenceArrayList.toArray()));
+        Log.i(TAG, "onCreate: charSequenceArrayList ======= " + Arrays.toString(parcelableArrayList.toArray()));
     }
 }
